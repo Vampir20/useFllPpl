@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    padding: 5px 20px;
+    background-color: black;
+
+    color: white;
+}
+
+.header-logo {
+    display: flex;
+    align-items:center;
+    justify-items: start;
+    height: 100%;
+    width: 50px;
+
+    color: white;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
+
+    a {
+        color: white;
+    }
+}
+
+.profile-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-color:transparent;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+.profile-link img {
+    width: 52px;
+    height: 52px;
+}
