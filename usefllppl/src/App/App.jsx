@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import Loyaut from "../pages/loyaut/Loyaut";
 import Home from "../pages/home/Home";
 import Navbar from "../pages/nav-bar/Navbar";
@@ -9,20 +9,17 @@ import About from "../pages/about/About";
 import ErrorPage from "../pages/error-page/ErrorPage";
 
 
+const router = createBrowserRouter(createRoutesFromElements(
+  <Route path="/" element={<Loyaut />}>
+    <Route index element={<Home />}/>
+    <Route path="about" element={<About />}/>
+    <Route path="*" element={<ErrorPage />}/>
+  </Route>
+))
+
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="wrapper">
-        <Navbar/>
-        <Routes>
-              <Route path='/' element={<Navigate to='/home'/>}/>
-              <Route path="/home" element={<Home />}/>
-              <Route path='/about' element={<About />}/>  
-              <Route path="*" element={<ErrorPage />}/>
-        </Routes>
-        <Footer />
-      </div>
-    </BrowserRouter>
+      <RouterProvider router={router}/>
   );
 };
 

@@ -1,10 +1,24 @@
 import './ErrorPage.scss';
+import { useLocation } from 'react-router-dom'
 
 const ErrorPage = () => {
+    const location = useLocation();
+
     return (
         <div className="error-page">
-            <p>Error</p>
-            <p>Not Found Page</p>
+            {
+                location.pathname === '/home'
+                ?
+                (
+                    <p>Our site does not have a path called {location.pathname},<br/>instead we use "/"</p>
+                )
+                :
+                (
+                    <>
+                        <p>Error<br/>No pages found for {location.pathname}</p>                    
+                    </>
+                )
+            }
         </div>
     )
 }

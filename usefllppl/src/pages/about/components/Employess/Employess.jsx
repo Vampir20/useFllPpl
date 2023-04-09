@@ -1,3 +1,5 @@
+import './Employees.scss';
+
 const Employees = ({name, position, profile, vk, instagram}) => {
     return (
         <>
@@ -12,8 +14,8 @@ const Employees = ({name, position, profile, vk, instagram}) => {
             </div>
             <div className="employees-contact">
                 <ul>
-                    <li> <a href={vk}><img src={require('../../svgs/vk-logo-of-social-network 1.svg').default} alt="" /></a> </li>
-                    <li> <a href={instagram}><img src={require('../../svgs/instagram 1.svg').default} alt="" /></a> </li>
+                    <li> <a target='_blank' href={vk}><img src={require('../../../svgs/vk-logo-of-social-network 1.svg').default} alt="" /></a> </li>
+                    <li> <a target='_blank' href={instagram}><img src={require('../../../svgs/instagram 1.svg').default} alt="" /></a> </li>
                 </ul>
             </div>
         </>
