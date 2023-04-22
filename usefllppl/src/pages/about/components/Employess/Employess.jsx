@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Employees.scss';
 
 const Employees = ({name, position, profile, vk, instagram}) => {
@@ -14,8 +15,8 @@ const Employees = ({name, position, profile, vk, instagram}) => {
             </div>
             <div className="employees-contact">
                 <ul>
-                    <li> <a target='_blank' href={vk}><img src={require('../../../svgs/vk-logo-of-social-network 1.svg').default} alt="" /></a> </li>
-                    <li> <a target='_blank' href={instagram}><img src={require('../../../svgs/instagram 1.svg').default} alt="" /></a> </li>
+                    <li> <Link target='_blank' className='vk-link' href={vk}></Link> </li>
+                    <li> <Link target='_blank' className='instagram-link' href={instagram}></Link> </li>
                 </ul>
             </div>
         </>

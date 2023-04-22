@@ -44,7 +44,22 @@
         li {
 
             a {
-                padding: 5px;
+                position: relative;
+                display: flex;
+                width: 20px;
+                height: 20px;
+                transition-duration: 0.2s;
+            }
+
+            a:hover {
+                scale: 1.1;
+            }
+
+            .vk-link {
+                background: url('../../../svgs/vk-logo-of-social-network\ 1.svg') 0 0/100% 100% no-repeat;
+            }
+            .instagram-link {
+                background: url('../../../svgs/instagram\ 1.svg') 0 0/100% 100% no-repeat;
             }
         }
 

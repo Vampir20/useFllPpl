@@ -1,8 +1,9 @@
 import './ErrorPage.scss';
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const ErrorPage = () => {
     const location = useLocation();
+    const navigate = useNavigate();
 
     return (
         <div className="error-page">
@@ -19,6 +20,10 @@ const ErrorPage = () => {
                     </>
                 )
             }
+            <div className="b">
+                <button onClick={() => navigate(-1)} className='home-button'>Go Home</button>
+                <button onClick={() => navigate('/', {replace: false})} className='back-button'>Go Back</button>
+            </div>
         </div>
     )
 }

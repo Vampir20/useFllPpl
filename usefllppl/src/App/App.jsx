@@ -1,10 +1,7 @@
 import "./App.scss";
-import { BrowserRouter, Route, Routes, Navigate, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import Loyaut from "../pages/loyaut/Loyaut";
 import Home from "../pages/home/Home";
-import Navbar from "../pages/nav-bar/Navbar";
-import Footer from "../pages/footer/Footer";
-import Cards from "../pages/cards/Cards";
 import About from "../pages/about/About";
 import ErrorPage from "../pages/error-page/ErrorPage";
 

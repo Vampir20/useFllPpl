@@ -11,13 +11,11 @@ html, body {
 * {
   margin: 0;
   padding: 0;
-
-  font-family: Inter;
-}
-
-* {
   outline: none;
   box-sizing: border-box;
+  border: none;
+
+  font-family: Inter;
 }
 
 ul {
@@ -44,4 +42,11 @@ input {
 
 .active-link {
   border-bottom: 1px solid white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
 }
